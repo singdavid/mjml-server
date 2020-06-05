@@ -18,6 +18,10 @@ fastify.post('/', function (request, reply) {
     reply.send(result)
 });
 
+fastify.register(require('fastify-cors'), { 
+  // put your options here
+})
+
 // Run the server!
 fastify.listen(3000, '127.0.0.1', function (err) {
     if (err) throw err;
